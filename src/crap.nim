@@ -31,3 +31,6 @@ when isMainModule:
   except IndexError:
     echo("error: no path specified")
     quit(0)
+  except OSError:
+    echo("error: no such file or directory")
+    quit(0)
