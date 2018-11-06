@@ -7,7 +7,7 @@ Ever `rm`ed a file and instantly regretted it? Fear not, for `crap` is here.
 ### How?
 `crap` follows the FreeDesktop.org Trash spec. So instead of perma-deleting your file, `crap` moves it to the `$XDG_DATA_HOME/Trash` folder. If this environment variable isn't set, it defaults to `~/.local/share/Trash`.
 
-And obviously, *this works only on Linux*. 
+And obviously, ***this works only on Linux***. 
 
 ## Installation
 `nimble install https://github.com/icyphox/crap`  
