@@ -6,7 +6,7 @@ import
 
 proc crap*(path: var string) =
   var trashHome: string
-  let fullPath = expandTilde(path)
+  let fullPath = expandFilename(path)
   path = extractFilename(fullPath)
 
   if existsEnv("XDG_DATA_HOME"):
@@ -26,14 +26,15 @@ DeletionDate={formattedTime}"""
   writeFile(joinPath(trashHome, "info", fmt"{path}.info"), trashInfo)
 
 when isMainModule:
-  var del: string
+  var del: string = ""
   try:
-    for f in countUp(1, paramCount()):
-      del = paramStr(f)
-      crap(del)
-  except IndexError:
-    echo("error: no path specified")
-    quit(0)
+    if paramCount() == 0:
+      echo("error: specify at least one file")
+      quit(0)
+    else:
+      for f in countUp(1, paramCount()):
+        del = paramStr(f).strip()
+        crap(del)
   except OSError:
     echo("error: no such file or directory")
     quit(0)
