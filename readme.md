@@ -21,8 +21,8 @@ Aaannddd it'll show up in your file manager's Trash.
 ![trash](https://x.ph0x.me/H6iNv.png)
 
 ## TODO
-- [ ] support multiple files
-- [ ] trashing dirs
+- [x] support multiple files
+- [x] trashing dirs
 
 ## Prior art
 - [sindresorhus/trash-cli](https://github.com/sindresorhus/trash-cli)
