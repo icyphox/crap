@@ -3,7 +3,7 @@ import
   strformat,
   times
 
-proc trash*(path: string) =
+proc crap*(path: string) =
   var trashHome: string
   let fullPath= expandFilename(path)
 
@@ -28,7 +28,7 @@ when isMainModule:
   try:
     for f in countUp(1, paramCount()):
       del = paramStr(f)
-      trash(del)
+      crap(del)
   except IndexError:
     echo("error: no path specified")
     quit(0)
