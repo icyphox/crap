@@ -21,6 +21,16 @@ $ crap foo.png
 ```
 Aaannddd it'll show up in your file manager's Trash.
 
+## API
+This package exposes a single proc: `crap(path: string)`
+
+```nim
+import crap
+
+crap('~/Pictures/*')
+
+```
+
 ![trash](https://x.ph0x.me/H6iNv.png)
 
 ## TODO
