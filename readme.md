@@ -22,12 +22,12 @@ $ crap foo.png
 Aaannddd it'll show up in your file manager's Trash.
 
 ## API
-This package exposes a single proc: `crap(path: string)`
+This package exposes a single proc: `crap(path: var string)`
 
 ```nim
 import crap
 
-crap('~/Pictures/*')
+crap("~/Pictures/*")
 
 ```
 
