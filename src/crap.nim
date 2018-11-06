@@ -1,23 +1,25 @@
 import
   os,
   strformat,
+  strutils,
   times
 
-proc crap*(path: string) =
+proc crap*(path: var string) =
   var trashHome: string
-  let fullPath= expandFilename(path)
+  let fullPath = expandTilde(path)
+  path = extractFilename(fullPath)
 
   if existsEnv("XDG_DATA_HOME"):
     trashHome = joinPath(getEnv("XDG_DATA_HOME"), "Trash")
   else:
     trashHome = joinPath(getHomeDir(), ".local/share/Trash")
-  moveFile(fullPath, fmt("{trashHome}/files/{path}"))
+
+  moveFile(fullPath, joinPath(trashHome, "files", path))
 
   let 
     t = getTime()
     formattedTime = t.format("yyyy-MM-dd") & "T" & t.format("HH:MM:ss")
-
-  var trashInfo = fmt"""[Trash Info]
+    trashInfo = fmt"""[Trash Info]
 Path={fullPath}
 DeletionDate={formattedTime}"""
 
