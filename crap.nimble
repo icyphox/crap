@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.1"
+version       = "0.1.2"
 author        = "Anirudh"
 description   = "`rm` files without fear"
 license       = "MIT"
