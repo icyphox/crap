@@ -21,6 +21,8 @@ $ crap foo.png
 ```
 Aaannddd it'll show up in your file manager's Trash.
 
+![trash](https://x.ph0x.me/H6iNv.png)
+
 ## API
 This package exposes a single proc: `crap(path: var string)`
 
@@ -30,8 +32,6 @@ import crap
 crap("~/Pictures/*")
 
 ```
-
-![trash](https://x.ph0x.me/H6iNv.png)
 
 ## TODO
 - [x] support multiple files
