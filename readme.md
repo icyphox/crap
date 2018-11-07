@@ -10,14 +10,23 @@ Ever `rm`ed a file and instantly regretted it? Fear not, for `crap` is here.
 And obviously, ***this works only on Linux***. 
 
 ## Installation
-`nimble install crap`  
+```console
+$ nimble install crap
+```
+
 or download the binary from the [Releases](https://github.com/icyphox/crap/releases/) page.
 
-Optionally, alias it to `rm`. But that's kinda the point.
+### Tip
+Alias `crap` to `rm` in your `.bashrc`/`.zshrc`. But that's kinda the point.
 
 ## Usage
 ```console
 $ crap foo.png
+
+$ crap *.png
+
+$ crap a.pdf b.jpg c.mp4
+
 ```
 Aaannddd it'll show up in your file manager's Trash.
 
@@ -40,3 +49,5 @@ crap("~/Pictures/*")
 
 ## Prior art
 - [sindresorhus/trash-cli](https://github.com/sindresorhus/trash-cli)
+
+
