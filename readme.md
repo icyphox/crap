@@ -10,7 +10,7 @@ Ever `rm`ed a file and instantly regretted it? Fear not, for `crap` is here.
 And obviously, ***this works only on Linux***. 
 
 ## Installation
-`nimble install https://github.com/icyphox/crap`  
+`nimble install crap`  
 or download the binary from the [Releases](https://github.com/icyphox/crap/releases/) page.
 
 Optionally, alias it to `rm`. But that's kinda the point.
