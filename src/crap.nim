@@ -23,7 +23,7 @@ proc crap*(path: var string) =
 Path={fullPath}
 DeletionDate={formattedTime}"""
 
-  writeFile(joinPath(trashHome, "info", fmt"{path}.info"), trashInfo)
+  writeFile(joinPath(trashHome, "info", fmt"{path}.trashinfo"), trashInfo)
 
 when isMainModule:
   var del: string = ""
