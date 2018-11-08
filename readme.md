@@ -1,4 +1,5 @@
-# crap
+# [<img src="https://x.ph0x.me/15QNk.png" width="150" align="left" alt="crap">](https://github.com/icyphox/crap)
+
 > `rm` files without fear
 
 ### Why?
