@@ -53,4 +53,8 @@ crap("~/Pictures/*")
 ## Prior art
 - [sindresorhus/trash-cli](https://github.com/sindresorhus/trash-cli)
 
+## Contributing
+Bad code? New feature in mind? Open an issue. Better still, learn [Nim](https://nim-lang.org/documentation.html) and shoot a PR :sparkles:
 
+## License
+MIT © Anirudh Oppiliappan
