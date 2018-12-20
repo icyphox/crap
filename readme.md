@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://x.ph0x.me/15QNk.png" width="280">
+  <img src="https://x.icyphox.sh/15QNk.png" width="280">
 </h1>
 
 > `rm` files without fear
@@ -33,7 +33,7 @@ $ crap a.pdf b.jpg c.mp4
 ```
 Aaannddd it'll show up in your file manager's Trash.
 
-![trash](https://x.ph0x.me/H6iNv.png)
+![trash](https://x.icyphox.sh/H6iNv.png)
 
 ## API
 This package exposes a single proc: `crap(path: var string)`
