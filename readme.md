@@ -57,4 +57,4 @@ crap("~/Pictures/*")
 Bad code? New feature in mind? Open an issue. Better still, learn [Nim](https://nim-lang.org/documentation.html) and shoot a PR :sparkles:
 
 ## License
-MIT © Anirudh Oppiliappan
+MIT © [Anirudh Oppiliappan](https://icyphox.sh)
