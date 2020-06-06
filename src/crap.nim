@@ -5,15 +5,24 @@ import
   times
 
 proc crap*(path: string) =
-  let fullPath = expandFilename(path)
-  let fname = extractFilename(fullPath)
+  var fullPath = expandFilename(path)
+  var fname = extractFilename(fullPath)
 
   let trashHome = if existsEnv("XDG_DATA_HOME"):
     getEnv("XDG_DATA_HOME") / "Trash"
   else:
     getHomeDir() / ".local/share/Trash"
 
-  moveFile(fullPath, trashHome / "files" / fname)
+  if existsFile(trashHome / "files" / fname):
+    var i = 1
+    while true:
+      if not existsFile(trashHome / "files" / fname & '.' & $i):
+        fname = fname & '.' & $i
+        moveFile(fullPath, trashHome / "files" / fname)
+        break
+      i = i+1
+  else:
+    moveFile(fullPath, trashHome / "files" / fname)
 
   let 
     t = getTime()
