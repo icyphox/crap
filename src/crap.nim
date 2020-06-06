@@ -13,10 +13,10 @@ proc crap*(path: string) =
   else:
     getHomeDir() / ".local/share/Trash"
 
-  if existsFile(trashHome / "files" / fname):
-    var i = 1
+  if existsFile(trashHome / "files" / fname) or existsDir(trashHome / "files" / fname):
+    var i = 2
     while true:
-      if not existsFile(trashHome / "files" / fname & '.' & $i):
+      if not (existsFile(trashHome / "files" / fname & '.' & $i) or existsDir(trashHome / "files" / fname & '.' & $i) ):
         fname = fname & '.' & $i
         moveFile(fullPath, trashHome / "files" / fname)
         break
